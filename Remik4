@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;			
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	string a;   
+    ifstream plik2;
+    plik2.open("c:\\Zananie Programowanie\\a.txt");  
+     while(!plik2.eof())        
+    {
+    plik2>>a;   
+    cout<<a;    
+    cout<<endl; 
+    }
+    plik2.close();
+    
+    return 0;
+}
