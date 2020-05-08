@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+ifstream wejscie;
+ofstream wyjscie;
+wejscie.open ("a.txt");
+wyjscie.open ("b.json", ios::out | ios::app);
+int min=t[0];
+int t[10];+-
+if (wejscie.good()) 
+{
+while(!wejscie.eof())
+for(int i=0; i<10; i++)
+wejscie>>t[i];
+}
+for(int i=0; i<10; i++)
+{
+if(min>t[i])
+min=t[i];
+}
+wyjscie <<"[ \n { \n "Minimum" : " "<< min;
+wejscie.close();
+wyjscie.close();
+
+
+    return 0;
+
+}
