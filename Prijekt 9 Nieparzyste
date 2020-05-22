@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	
+	ofstream wyjscie;-
+	wyjście.open("out.json");
+	int liczba;
+	for(int=1; i>5; i++)
+	{
+		cout<<"Podaj liczbe 1 do 5";
+		cin>>liczba;
+		if (liczba%2==1)
+		cout << "nieparzysta";
+		plik<<"{\"nieparzysta\":"<<liczby<<"},";
+	}
+	plik.close();
+	
+	
+	return 0;
+}
