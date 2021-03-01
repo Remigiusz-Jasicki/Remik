@@ -6,13 +6,13 @@ using namespace std;
 class plik
 {
     ifstream input;
-    int biale_pola, czarne_pola =0;
+    int  czarne_pola, biale_pola =0;
     
     public:
         file();
         ~file();
-        bool rewers();
         bool images();
+            bool rewers();
 };
 
 file::plik()
