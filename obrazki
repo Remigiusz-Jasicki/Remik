@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+class plik
+{
+    ifstream input;
+    int biale_pola, czarne_pola =0;
+    
+    public:
+        file();
+        ~file();
+        bool rewers();
+        bool images();
+};
+
+file::plik()
+{
+    input.open("dane_obrazki.txt");
+}
+bool plik::rewers() {
+    string wczytanie;
+
+    if(input.good()) {
+        while(!input.eof()) {
+            input >> wczytanie;
+        }
+    }
+
+    for(int i=0; i<20; i++) {
+        if(wczytanie[i] == '1') {
+            czarne_pola++;
+        } else
+        if(data[i] == '0') {
+            biale_pola++;
+        }
+    }
+    
+    if(czarne_pola > biale_pola)
+    {
+        return true;
+    }
+    
+}
+int main(int argc, char** argv) {
+cout <<plik.rewers()<<endl;
+return 0;
+}
