@@ -1,0 +1,72 @@
+#include <fstream>
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+class file
+{
+        ifstream inFile;
+       
+        public:
+                file();
+                ~file();
+                void loop(); 
+                bool even(string);
+                bool twoCycle(string);
+};
+
+
+file::file()
+{
+        inFile.open("c:\\pliki\\dane_obrazki.txt");
+        if (!inFile.good())
+        {
+                cerr << "Blad - pliku nie da sie otworzyc!\n";
+                exit(1);
+        }
+}
+
+file::~file()
+{
+        inFile.close();
+}
+
+loop file::poprawny() {
+    
+    while(!input.eof()) {
+        string obrazek[21];
+        
+        for(int i=0; i<21; i++) {
+            input >> obrazek[i];
+        }
+        
+        for(int i=0; i<20; i++) {
+            parzysteWiersze = 0;
+            parzysteKolumny = 0;
+            for(int j=0; j<20; j++) {
+                parzysteWiersze = parzysteWiersze + obrazek[i][j];
+                parzysteKolumny = parzysteKolumny + obrazek[j][i];
+                if(parzysteWiersze %2 != obrazek[i][20]) {
+                    blądWiersza++;
+                }
+                if(parzysteKolumny %2 != obraz[20][i]) {
+                    blądKolumny++;
+                }
+            }
+        }
+        if( blądWiersza+blądKolumny == 0) {
+            prawidłowych++;
+        }
+        
+    }
+    
+    cout << "Prawidłowych obrazkow: " << prawidłowych;
+}
+int main(int argc, char** argv) 
+	{
+        file f;
+        f.loop();
+        return 0;
+}
+	return 0;
